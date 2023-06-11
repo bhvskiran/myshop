@@ -14,6 +14,8 @@ import DropDown from "./DropDown";
 import NavBar from "./NavBar";
 import { useSelector } from "react-redux";
 import { backendUrl } from "../../server";
+import Cart from "../Common/Cart";
+import WishList from "../Common/WishList";
 
 const Header = (props) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -22,6 +24,8 @@ const Header = (props) => {
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const [openCart, setOpenCart] = useState(false);
+  const [openWishlist, setOpenWishlist] = useState(false);
 
   const handleSearchChange = (e) => {
     const term = e.target.value;
@@ -146,7 +150,10 @@ const Header = (props) => {
           <div className="flex">
             {/* wishlist */}
             <div className={`${styles.normalFlex}`}>
-              <div className="relative cursor-pointer mr-[15px]">
+              <div
+                className="relative cursor-pointer mr-[15px]"
+                onClick={() => setOpenWishlist(true)}
+              >
                 <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
                 <span className="absolute right-0 top-0 rounded-full bg-[#8B4513] w-3.5 h-3.5 p-0 m-0 text-white font-mono text-[10px] leading-tight text-center">
                   0
@@ -156,7 +163,10 @@ const Header = (props) => {
 
             {/* cart icon */}
             <div className={`${styles.normalFlex}`}>
-              <div className="relative cursor-pointer mr-[15px]">
+              <div
+                className="relative cursor-pointer mr-[15px]"
+                onClick={() => setOpenCart(true)}
+              >
                 <AiOutlineShoppingCart
                   size={30}
                   color="rgb(255 255 255 / 83%)"
@@ -185,6 +195,12 @@ const Header = (props) => {
                 )}
               </div>
             </div>
+
+            {/* wishlist side popup */}
+            {openWishlist && <WishList setOpenWishlist={setOpenWishlist} />}
+
+            {/* cart side popup */}
+            {openCart && <Cart setOpenCart={setOpenCart} />}
           </div>
         </div>
       </div>
