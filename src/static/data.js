@@ -602,47 +602,98 @@ export const footerProductLinks = [
   },
   {
     name: "Store Locations",
+    link: "/store-locations",
   },
   {
     name: "Our Blog",
+    link: "/blog",
   },
   {
     name: "Reviews",
+    link: "/reviews",
   },
 ];
 
 export const footercompanyLinks = [
   {
     name: "Game & Video",
+    link: "/",
   },
   {
     name: "Phone &Tablets",
+    link: "/",
   },
   {
     name: "Computers & Laptop",
+    link: "/",
   },
   {
     name: "Sport Watches",
+    link: "/",
   },
   {
     name: "Events",
+    link: "/",
   },
 ];
 
 export const footerSupportLinks = [
   {
     name: "FAQ",
+    link: "/",
   },
   {
     name: "Reviews",
+    link: "/",
   },
   {
     name: "Contact Us",
+    link: "/",
   },
   {
     name: "Shipping",
+    link: "/",
   },
   {
     name: "Live chat",
+    link: "/",
+  },
+];
+
+export const faqsData = [
+  {
+    id: 1,
+    faqQues: "In how many days do I get my order?",
+    desc: "We typically process and ship orders within 1-2 business days. Depending on your location, it can take an additional 2-7 days for your order to arrive.",
+  },
+  {
+    id: 2,
+    faqQues: "What is your return policy?",
+    desc: "If you're not satisfied with your purchase, we accept returns within 30 days of delivery. To initiate a return, please email us at support@myecommercestore.com with your order number and a brief explanation of why you're returning the item.",
+  },
+  {
+    id: 3,
+    faqQues: "How do I track my order?",
+    desc: "You can track your order by clicking the tracking link in your shipping confirmation email, or by logging into your account on our website and viewing the order details.",
+  },
+  {
+    id: 4,
+    faqQues: "How do I contact customer support?",
+    desc: "You can contact our customer support team by emailing us at support@myecommercestore.com, or by calling us at (555) 123-4567 between the hours of 9am and 5pm EST, Monday through Friday.",
+  },
+  {
+    id: 5,
+    faqQues: "Can I change or cancel my order?",
+    desc: "Unfortunately, once an order has been placed, we are not able to make changes or cancellations. If you no longer want the items you've ordered, you can return them for a refund within 30 days of delivery.",
+  },
+  {
+    id: 6,
+    faqQues: "Do you offer international shipping?",
+    desc: "Currently, we only offer shipping within the United States.",
+  },
+  {
+    id: 7,
+    faqQues: "What payment methods do you accept?",
+    desc: "We accept visa,mastercard,paypal payment method also we have cash on delivery system.",
   },
 ];
